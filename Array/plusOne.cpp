@@ -34,9 +34,18 @@ vector<int> plusOne(vector<int> &vec)
         }
         else
         {
-            vec[size - 1] = 0;
-            vec[size - 2] += 1;
-            return vec;
+            for (int i = 0; i < size; i++)
+            {
+                if (vec[size - i - 1] == 9)
+                {
+                    vec[size - i - 1] = 0;
+                }
+                else
+                {
+                    vec[size - i - 1] += 1;
+                    return vec;
+                }
+            }
         }
     }
 
@@ -50,7 +59,8 @@ int main()
     vector<int> vec3 = {1, 9};
     vector<int> vec4 = {9, 9};
     vector<int> vec5 = {9, 9, 9, 9};
-    vector<int> vec6 = {9, 2, 3, 9, 0, 2};
+    vector<int> vec6 = {8, 9, 9, 9};
+    vector<int> vec7 = {9, 2, 3, 9, 0, 2};
 
     vector<int> updatedVec = plusOne(vec6);
 
