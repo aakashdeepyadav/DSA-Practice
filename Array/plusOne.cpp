@@ -50,7 +50,6 @@ int main()
     vector<int> vec3 = {1, 9};
     vector<int> vec4 = {9, 9};
     vector<int> vec5 = {9, 9, 9, 9};
-    vector<int> vec6 = {9, 2, 3, 9};
     vector<int> vec6 = {9, 2, 3, 9, 0, 2};
 
     vector<int> updatedVec = plusOne(vec6);
