@@ -3,21 +3,12 @@
 
 using namespace std;
 
-<<<<<<< HEAD
 int containerWithMostWater(vector<int>&height){
     int max=INT_MIN;
     for(int i=0; i<height.size(); i++){
         for(int j=1; j<height.size(); j++){
             if((min(height[i],height[j])*abs(i-j))>max){
                 max=min(height[i],height[j])*abs(i-j);
-=======
-int containerWithMostWater(vector<int>&arr){
-    int max=INT_MIN;
-    for(int i=0; i<arr.size(); i++){
-        for(int j=1; j<arr.size(); j++){
-            if((min(arr[i],arr[j])*abs(i-j))>max){
-                max=min(arr[i],arr[j])*abs(i-j);
->>>>>>> c667d1b0a559ad4f54aac033533636af05521e99
             }
         }
     }
@@ -27,16 +18,8 @@ int containerWithMostWater(vector<int>&arr){
 
 
 int main(){
-<<<<<<< HEAD
     vector<int> height={1,8,6,2,5,4,8,3,7};
     int max=containerWithMostWater(height);
     cout << "The max area is " << max ;
     return 0;
 }
-=======
-    vector<int> arr={1,8,6,2,5,4,8,3,7};
-    int max=containerWithMostWater(arr);
-    cout << "The max area is " << max ;
-    return 0;
-}
->>>>>>> c667d1b0a559ad4f54aac033533636af05521e99

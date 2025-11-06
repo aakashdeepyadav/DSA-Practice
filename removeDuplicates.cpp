@@ -27,8 +27,4 @@ int main() {
     }
     cout << endl;
     return 0;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c667d1b0a559ad4f54aac033533636af05521e99

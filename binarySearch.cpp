@@ -24,11 +24,7 @@ int binarySearch(vector<int>&arr, int target){
 
 int main(){
     vector<int> arr={1,2,3,4,4,5,8};
-<<<<<<< HEAD
     int target=4;
-=======
-    int target=3;
->>>>>>> c667d1b0a559ad4f54aac033533636af05521e99
     int findAt=binarySearch(arr,target);
 
     if(findAt==-1){
@@ -38,8 +34,4 @@ int main(){
     }
 
     return 0;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c667d1b0a559ad4f54aac033533636af05521e99

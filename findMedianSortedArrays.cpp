@@ -6,18 +6,9 @@ using namespace std;
 double findMedianSortedArrays(vector<int>& arr1, vector<int>& arr2) {
     if (arr1.size() > arr2.size())
         return findMedianSortedArrays(arr2, arr1);
-<<<<<<< HEAD
 
     int m = arr1.size(), n = arr2.size();
     int totalLeft = (m + n + 1) / 2;
-=======
-  
-
-    int m = arr1.size(), n = arr2.size();
-    int totalLeft = (m + n + 1) / 2;
-
-  
->>>>>>> c667d1b0a559ad4f54aac033533636af05521e99
     int low = 0, high = m;
 
     while (low <= high) {
@@ -34,38 +25,17 @@ double findMedianSortedArrays(vector<int>& arr1, vector<int>& arr2) {
                 return (max(L1, L2) + min(R1, R2)) / 2.0;
             else
                 return max(L1, L2);
-<<<<<<< HEAD
-=======
-
-          
->>>>>>> c667d1b0a559ad4f54aac033533636af05521e99
         } else if (L1 > R2)
             high = i - 1;
         else
             low = i + 1;
-<<<<<<< HEAD
-=======
-
-
-    
->>>>>>> c667d1b0a559ad4f54aac033533636af05521e99
     }
 
     return 0;
 }
 
 int main() {
-<<<<<<< HEAD
     vector<int> arr1 = {1, 3};
     vector<int> arr2 = {2, 4, 5};
     cout << findMedianSortedArrays(arr1, arr2);
 }
-=======
-
-  
-    vector<int> arr1 = {1, 3};
-    vector<int> arr2 = {2, 4, 5};
-  
-    cout <<"The median of two sorted array is "<< findMedianSortedArrays(arr1, arr2);
-}
->>>>>>> c667d1b0a559ad4f54aac033533636af05521e99
