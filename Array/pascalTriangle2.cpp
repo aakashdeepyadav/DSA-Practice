@@ -7,17 +7,17 @@ vector<int> getRowValues(int rowIndex)
 {
     vector<vector<int>> vecArr;
 
-    if (rowIndex <= 0)
+    if (rowIndex < 0)
         return {};
 
-    if (rowIndex == 1)
+    if (rowIndex == 0)
     {
         vecArr.resize(1);
         vecArr[0].resize(1);
         vecArr[0][0] = 1;
         return vecArr[0];
     }
-    else if (rowIndex == 2)
+    else if (rowIndex == 1)
     {
         vecArr.resize(2);
         vecArr[0].resize(1);
@@ -29,7 +29,7 @@ vector<int> getRowValues(int rowIndex)
     }
     else
     {
-        vecArr.resize(rowIndex);
+        vecArr.resize(rowIndex + 1);
         vecArr[0].resize(1);
         vecArr[1].resize(2);
         vecArr[0][0] = 1;
@@ -37,7 +37,7 @@ vector<int> getRowValues(int rowIndex)
         vecArr[1][1] = 1;
     }
 
-    for (int i = 2; i < rowIndex; i++)
+    for (int i = 2; i <= rowIndex; i++)
     {
         vecArr[i].resize(i + 1);
         for (int j = 0; j <= i; j++)
@@ -52,7 +52,7 @@ vector<int> getRowValues(int rowIndex)
             }
         }
     }
-    return vecArr[rowIndex - 1];
+    return vecArr[rowIndex];
 }
 
 int main()
@@ -64,7 +64,7 @@ int main()
 
     vector<int> returnedVector = getRowValues(rowIndex);
 
-    for (int j = 0; j < rowIndex; j++)
+    for (int j = 0; j <= rowIndex; j++)
     {
         cout << returnedVector[j] << " ";
     }
