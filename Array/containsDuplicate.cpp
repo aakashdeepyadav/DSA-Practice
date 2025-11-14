@@ -13,8 +13,8 @@ bool containsDuplicate(vector<int> &numsArr)
         if (st.count(numsArr[i]))
         {
             return true;
-            st.insert(numsArr[i]);
         }
+        st.insert(numsArr[i]);
     }
     return false;
 }
