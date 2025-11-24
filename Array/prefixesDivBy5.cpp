@@ -1,10 +1,17 @@
 #include <iostream>
 #include <vector>
-#include <cmath>
 #include <string>
-#include <algorithm>
-
 using namespace std;
+
+int binaryToDecimal(string s)
+{
+    int num = 0;
+    for (char c : s)
+    {
+        num = num * 2 + (c - '0');
+    }
+    return num;
+}
 
 vector<bool> prefixesDivBy5(vector<int> &nums)
 {
@@ -14,30 +21,20 @@ vector<bool> prefixesDivBy5(vector<int> &nums)
 
     for (int i = 0; i < size; i++)
     {
-        string nm;
-        for (int j = 0; j < size - i; j++)
+        string nm = "";
+        for (int j = 0; j <= i; j++)
         {
             nm += to_string(nums[j]);
         }
-        int nmm = stoi(nm);
+        int nmm = binaryToDecimal(nm);
         pre.push_back(nmm);
     }
 
-    reverse(pre.begin(), pre.end());
-
-    for (int i = size - 1; i >= 0; i--)
+    for (int val : pre)
     {
-        int n = 0;
-        n = n + pow(2, i) * pre[size - i - 1]; //              2^2 * 1 +  2^1 * 1 + 2^0 *1
-        if (n % 5 == 0)
-        {
-            bl.push_back(true);
-        }
-        else
-        {
-            bl.push_back(false);
-        }
+        bl.push_back(val % 5 == 0);
     }
+
     return bl;
 }
 
