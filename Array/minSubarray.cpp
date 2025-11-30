@@ -38,8 +38,8 @@ int minSubarray(vector<int> vec, int p)
 
 int main()
 {
-    vector<int> vecArray={3,5,6,7};
-    int k=8;
+    vector<int> vecArray={3,1,4,2};
+    int k=6;
 
     int subarray=minSubarray(vecArray,k);
     cout << "The minimum subarray is " << subarray;
